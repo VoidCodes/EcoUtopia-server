@@ -116,7 +116,7 @@ app.use('/discount', discountRoute);
 
 db.sequelize.sync({ alter: true }).then(async () => {
     await seedAdmin(); // Seed the admin user
-    let port = process.env.APP_PORT;
+    let port = process.env.APP_PORT || 80;
 
     app.listen(port, () => {
         console.log(`Server is running on port ${port}`);
