@@ -5,8 +5,8 @@ const { S3Client } = require("@aws-sdk/client-s3");
 
 const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
 const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
-const region = process.env.S3_REGION;
-const Bucket = process.env.S3_BUCKET;
+const region = process.env.S3_REGION || "ap-southeast-1"; // change it as per your project requirement
+const Bucket = process.env.S3_BUCKET || "ecoutopia-bucket"; // change it as per your project requirement
 
 // create s3 instance using S3Client 
 // (this is how we create s3 instance in v3)
