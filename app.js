@@ -25,7 +25,7 @@ app.use(cors({
 
 // Simple Route
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to the EcoUtopia API" });
+    res.json({ message: "Welcome to the EcoUtopia API, test" });
 });
 
 app.post("/upload", (req, res) => {
